@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Hands on Hadoop: The Python Way &middot; glic3rinu.github.io
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="container content">
+      <div class="masthead">
+      </div>
+
+        <div class="page">
+        <h1 class="page-title">Hands on Hadoop: The Python Way</h1>
+      <span class="post-date">06 Feb 2014</span>
+        <p class="message">
+This is an extension of <a href="http://www.jorditorres.org/teaching/hands-on/hands-on-installing-apache-hadoop/">this hands on</a>.
+</p>
+
+<p><a href="http://hadoop.apache.org/docs/r1.2.1/streaming.html">Hadoop streaming</a> is a utility that comes with the Hadoop distribution,
+allowing to create and run jobs with an script as a <em>mapper</em> and <em>reducer</em>.</p>
+
+<p>For example:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">hadoop jar hadoop-1.2.1/contrib/streaming/hadoop-*streaming*.jar <span class="se">\</span>
+    -file mapper.py -mapper mapper.py <span class="se">\</span>
+    -file reducer.py -reducer reducer.py <span class="se">\</span>
+    -input /input -output /output
+</code></pre></div>
+<p>The above example specifies the <em>mapper</em> and <em>reducer</em> as Python executables.</p>
+
+<p>Hadoop will connect them in a pipeline fashion:</p>
+
+<ol>
+<li><p>The original input data will be feeded to the <em>mapper</em> via standard input</p></li>
+<li><p>The <em>mapper</em> sends the processed data to the <em>reducer</em> via standard output</p></li>
+</ol>
+
+<h4>Mapper</h4>
+
+<p>Next the <code>mapper.py</code> script that counts the number of words:</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c"># read the input from stdin</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">:</span>
+    <span class="c"># split the line into words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="c"># one word has been found ;)</span>
+        <span class="k">print</span> <span class="s">&#39;</span><span class="si">%s</span><span class="se">\t</span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h4>Reducer</h4>
+
+<p>This is the content of <code>reducer.py</code>, which adds up the <em>mapper</em> results:</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">counter</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c"># read the input from stdin</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">:</span>
+    <span class="c"># parse the line from mapper</span>
+    <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\t</span><span class="s">&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c"># increase the word counter</span>
+    <span class="n">counter</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">counter</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+
+<span class="c"># output the results</span>
+<span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">counter</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s">&#39;</span><span class="si">%s</span><span class="se">\t</span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+<p>Just don&#39;t forget to add execution permission to the <em>mapper</em> and reducer scripts</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">chmod +x <span class="o">{</span>mapper,reducer<span class="o">}</span>.py
+</code></pre></div>
+<p>A nice thing about scripts is that they can be easily tested without having to run Hadoop at all !</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">hadoop@hadoop:~<span class="nv">$ </span>cat pg19699.txt <span class="p">|</span> ./mapper.py <span class="p">|</span> ./reducer.py
+Nipata_ 1
+scales  6
+forbid  1
+Robert  39
+nationalities   2
+Umbrian 1
+Wiltshire.  2
+motor   2
+apply   10
+Conditions  2
+...
+</code></pre></div>
+<h4>In Conclusion</h4>
+
+<p>The streaming utility combined with the Python programming language makes a very friendly environment for beginners.</p>
+
+<p>External libraries and complex compilations get out of the way, so you can start playing with Hadoop right away.</p>
+
+        </div>
+    </div>
+
+  </body>
+</html>
+
