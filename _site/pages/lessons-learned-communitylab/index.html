@@ -54,7 +54,7 @@
 <p>Nodes come and go, you can not assume all your slivers being on the same state.</p>
 
 <p>Design experiments in such a way that can run on both, fresh and already deployed nodes.</p></li>
-<li><p><strong>Use concurrency for experiment deployment and for collecting the results</strong></p>
+<li><p><strong>Use concurrency for experiment deployment and for collecting results</strong></p>
 
 <p>You <em>really</em> don&#39;t want to sequentially wait for half of your slivers timing out their SSH connections.</p>
 
@@ -112,11 +112,11 @@ Just imagine how this will look like if written with Java&#39;s threading librar
 <p>Network splits are common around community networks. You may end-up having multiple isolated experiments rather than a single one.</p></li>
 <li><p><strong>Common development tools and network utils are missing :(</strong></p>
 
-<p>For sure your <code>experiment.sh</code> will need to start with something like this (with hope for Internet connectivity being available):</p>
+<p>For sure your <code>experiment.sh</code> will need to start with something like this (and hope for Internet connectivity being available too):</p>
 <div class="highlight"><pre><code class="bash language-bash" data-lang="bash">apt-get update <span class="o">&amp;&amp;</span> <span class="se">\</span>
 apt-get install -y inetutils-ping git traceroute tcpdump nano strace screen
 </code></pre></div>
-<p>You also can <a href="https://wiki.confine-project.eu/soft:debian-template">create your own sliver templates</a>, but you&#39;ll have to learn a few things that you don&#39;t want to.</p></li>
+<p>Also you can <a href="https://wiki.confine-project.eu/soft:debian-template">create your own sliver templates</a>, but most probably you&#39;ll have to learn a few things that you don&#39;t want to.</p></li>
 <li><p><strong>Did you forgot to set the slice state to start?</strong></p>
 
 <p>Me too :)</p></li>

@@ -26,7 +26,7 @@ date: 2014/05/06
     Design experiments in such a way that can run on both, fresh and already deployed nodes.
 
 
-3. **Use concurrency for experiment deployment and for collecting the results**
+3. **Use concurrency for experiment deployment and for collecting results**
 
     You *really* don't want to sequentially wait for half of your slivers timing out their SSH connections.
     
@@ -94,14 +94,14 @@ date: 2014/05/06
 
 7. **Common development tools and network utils are missing :(**
 
-    For sure your `experiment.sh` will need to start with something like this (with hope for Internet connectivity being available):
+    For sure your `experiment.sh` will need to start with something like this (and hope for Internet connectivity being available too):
     
     ```bash
     apt-get update && \
     apt-get install -y inetutils-ping git traceroute tcpdump nano strace screen
     ```
     
-    You also can [create your own sliver templates](https://wiki.confine-project.eu/soft:debian-template), but you'll have to learn a few things that you don't want to.
+    Also you can [create your own sliver templates](https://wiki.confine-project.eu/soft:debian-template), but most probably you'll have to learn a few things that you don't want to.
 
 
 8. **Did you forgot to set the slice state to start?**
