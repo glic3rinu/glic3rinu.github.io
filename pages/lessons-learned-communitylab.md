@@ -82,7 +82,7 @@ date: 2014/05/06
 
     Common sliver free space is arround ~700MB, which may be not enough for installing required dev libraries and compiling your average C++ application.
     
-    Moreover, doing so in an overcrowded Intel Atom machine will take like... I don't know; 10x more than in your high-end desktop?
+    Moreover, doing so in an overcrowded Intel Atom machine will take like... I don't know... 10x more than in your high-end desktop?
 
 
 6. **Be prepared for network issues**
