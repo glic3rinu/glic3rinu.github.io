@@ -28,10 +28,10 @@ date: 2014/05/06
 
 3. **Use concurrency for experiment deployment and for collecting results**
 
-    You *really* don't want to sequentially wait for half of your slivers timing out their SSH connections.
+    You *really* don't want to sequentially wait for half of your slivers to timeout their SSH connections.
     
     Use scripting languages like Bash. Bash integrates process management into the language itself.
-    Just imagine how this will look like if written with Java's threading library:
+    Just imagine how this will look like if written in something like Java's threading library:
     
     ```bash
     cat sliver-mgmt-ip.list | while read IP; do
@@ -94,7 +94,7 @@ date: 2014/05/06
 
 7. **Common development tools and network utils are missing :(**
 
-    For sure your `experiment.sh` will need to start with something like this (and hope for Internet connectivity being available too):
+    Most probably your `experiment.sh` will need to start with something like this (and hope for Internet connectivity being available too):
     
     ```bash
     apt-get update && \
