@@ -94,7 +94,7 @@ date: 2014/05/06
 
 7. **Common development tools and network utils are missing :(**
 
-    Most probably your `experiment.sh` will need to start with something like this (and hope for Internet connectivity being available too):
+    For sure your `experiment.sh` will start with something like this (and hope for Internet connectivity being available too):
     
     ```bash
     apt-get update && \
