@@ -21,7 +21,7 @@ date: 2014/05/06
 
 2. **Make your experiments idempotent**
 
-    Nodes come and go, you can not assume all your slivers being on the same state.
+    Nodes come and go, you can not assume all your slivers being on the same homogeneous state.
     
     Design experiments in such a way that can run on both, fresh and already deployed nodes.
 
