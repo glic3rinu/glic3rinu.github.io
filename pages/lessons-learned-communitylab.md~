@@ -58,7 +58,7 @@ date: 2014/05/06
     slivers = controller.slivers.retrieve()
     slivers.retrieve_related('node', 'slice')
     
-    # Calculate sliver MGMT IP according to CONFINE addressing specs
+    # Now calculate sliver MGMT IP according to CONFINE addressing specs
     # https://wiki.confine-project.eu/arch:addressing
     MGMT_IPV6_PREFIX = controller.testbed_params.mgmt_ipv6_prefix
     int_to_hex_str = lambda i,l: ('%.' + str(l) + 'x') % i
