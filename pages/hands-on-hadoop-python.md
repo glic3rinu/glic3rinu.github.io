@@ -1,7 +1,7 @@
 ---
 title: "Hands on Hadoop: The Python Way"
 layout: standalone-page
-date: 2014/02/06
+date: 2014/03/06
 ---
 
 

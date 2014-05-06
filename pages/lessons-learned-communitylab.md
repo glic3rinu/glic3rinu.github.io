@@ -6,7 +6,7 @@ date: 2014/05/06
 
 <p class="message" style="text-align:center">
     These are some interesting thoughts compiled after my first experiment on 
-    <a href="http://community-lab.net/">CommunityLab</a> testbed, a project which I am a former developer.
+    <a href="http://community-lab.net/">Community Lab</a> testbed, a project which I am a former developer of.
 </p>
 
 
@@ -23,7 +23,7 @@ date: 2014/05/06
 
     Nodes come and go, you can not assume all your slivers being on the same homogeneous state.
     
-    Design experiments in such a way that can run on both, fresh and already deployed nodes.
+    Write experiments in such a way that can run on both, fresh and already deployed nodes.
 
 
 3. **Use concurrency for experiment deployment and for collecting results**
