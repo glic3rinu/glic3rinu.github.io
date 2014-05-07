@@ -30,7 +30,7 @@ date: 2014/05/06
 
 3. **Use concurrency for experiment deployment and for collecting results**
 
-    You *really* don't want to sequentially wait for all of your offline slivers to timeout their SSH connections.
+    You *really* don't want to wait for all of your offline slivers to sequentially timeout their SSH connections.
     
     Use scripting languages like Bash. Bash integrates process management into the language itself:
     
