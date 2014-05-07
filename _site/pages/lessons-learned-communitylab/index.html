@@ -37,7 +37,7 @@
         <h1 class="page-title">Lessons Learned from Community Lab</h1>
       <span class="post-date">06 May 2014</span>
         <p class="message" style="text-align:center">
-    These are some interesting thoughts compiled after my first experiment on 
+    These are some <em>interesting</em> thoughts compiled after my first experiment on 
     <a href="http://community-lab.net/">Community Lab</a> testbed, a project of which I am a former developer.
 </p>
 
@@ -62,14 +62,15 @@
 
 <p>Use scripting languages like Bash. Bash integrates process management into the language itself:</p>
 <div class="highlight"><pre><code class="bash language-bash" data-lang="bash">cat sliver-mgmt-ip.list <span class="p">|</span> <span class="k">while </span><span class="nb">read </span>IP<span class="p">;</span> <span class="k">do</span>
-  <span class="c"># The following block will run concurrently, because of the ending &amp;</span>
-  <span class="o">{</span>
-    <span class="c"># Kill possible running experiments</span>
-    ssh -o <span class="nv">stricthostkeychecking</span><span class="o">=</span>no root@<span class="nv">$IP</span> <span class="s2">&quot;pkill -f experiment.sh&quot;</span>
-    <span class="c"># Install and start on background</span>
-    scp experiment.sh root@<span class="o">[</span><span class="nv">$IP</span><span class="o">]</span>: <span class="o">&amp;&amp;</span>
-    ssh root@<span class="nv">$IP</span> <span class="s2">&quot;nohup bash experiment.sh&quot;</span>
-  <span class="o">}</span> <span class="p">&amp;</span>
+    <span class="c"># This block will run concurrently, because of the ending &amp;</span>
+    <span class="o">{</span>
+      <span class="c"># Kill possible running experiments</span>
+      ssh -o <span class="nv">stricthostkeychecking</span><span class="o">=</span>no <span class="se">\</span>
+          root@<span class="nv">$IP</span> <span class="s1">&#39;pkill -f experiment.sh&#39;</span>
+      <span class="c"># Install and start on background</span>
+      scp experiment.sh root@<span class="o">[</span><span class="nv">$IP</span><span class="o">]</span>: <span class="o">&amp;&amp;</span>
+      ssh root@<span class="nv">$IP</span> <span class="s1">&#39;nohup bash experiment.sh&#39;</span>
+    <span class="o">}</span> <span class="p">&amp;</span>
 <span class="k">done</span>
 </code></pre></div></li>
 <li><p><strong>CONFINE REST API doesn&#39;t love you too much</strong></p>

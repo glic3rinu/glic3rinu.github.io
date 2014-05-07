@@ -5,7 +5,7 @@ date: 2014/05/06
 ---
 
 <p class="message" style="text-align:center">
-    These are some interesting thoughts compiled after my first experiment on 
+    These are some <em>interesting</em> thoughts compiled after my first experiment on 
     <a href="http://community-lab.net/">Community Lab</a> testbed, a project of which I am a former developer.
 </p>
 
@@ -36,14 +36,15 @@ date: 2014/05/06
     
     ```bash
     cat sliver-mgmt-ip.list | while read IP; do
-      # The following block will run concurrently, because of the ending &
-      {
-        # Kill possible running experiments
-        ssh -o stricthostkeychecking=no root@$IP "pkill -f experiment.sh"
-        # Install and start on background
-        scp experiment.sh root@[$IP]: &&
-        ssh root@$IP "nohup bash experiment.sh"
-      } &
+        # This block will run concurrently, because of the ending &
+        {
+          # Kill possible running experiments
+          ssh -o stricthostkeychecking=no \
+              root@$IP 'pkill -f experiment.sh'
+          # Install and start on background
+          scp experiment.sh root@[$IP]: &&
+          ssh root@$IP 'nohup bash experiment.sh'
+        } &
     done
     ```
 
