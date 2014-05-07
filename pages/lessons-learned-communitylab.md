@@ -108,7 +108,8 @@ date: 2014/05/06
     
     ```bash
     apt-get update && \
-    apt-get install -y inetutils-ping git traceroute tcpdump nano strace screen
+    apt-get install -y inetutils-ping git traceroute tcpdump nano \
+        strace screen python
     ```
     
     Also you can [create your own sliver templates](https://wiki.confine-project.eu/soft:debian-template), but most probably you'll have to learn a few things that you didn't want to.

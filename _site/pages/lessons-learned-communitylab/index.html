@@ -121,7 +121,8 @@
 
 <p>For sure your first <code>experiment.sh</code> will start with something like this (and hope for Internet connectivity being available too):</p>
 <div class="highlight"><pre><code class="bash language-bash" data-lang="bash">apt-get update <span class="o">&amp;&amp;</span> <span class="se">\</span>
-apt-get install -y inetutils-ping git traceroute tcpdump nano strace screen
+apt-get install -y inetutils-ping git traceroute tcpdump nano <span class="se">\</span>
+    strace screen python
 </code></pre></div>
 <p>Also you can <a href="https://wiki.confine-project.eu/soft:debian-template">create your own sliver templates</a>, but most probably you&#39;ll have to learn a few things that you didn&#39;t want to.</p></li>
 <li><p><strong>Did you forgot to set the slice state to start?</strong></p>
