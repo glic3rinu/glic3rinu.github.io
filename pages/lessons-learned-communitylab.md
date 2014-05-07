@@ -48,7 +48,7 @@ date: 2014/05/06
     done
     ```
     
-    There are [specific tools](http://wiki.confine-project.eu/usage:slice-admin#using_your_slice_all_slivers_for_a_common_task) that you can use for one time commands.
+    There are [specific tools](http://wiki.confine-project.eu/usage:slice-admin#using_your_slice_all_slivers_for_a_common_task) that you can use for parallel execution of one-time commands.
 
 
 4. **CONFINE REST API doesn't love you too much**
