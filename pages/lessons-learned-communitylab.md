@@ -6,17 +6,19 @@ date: 2014/05/06
 
 <p class="message" style="text-align:center">
     These are some interesting thoughts compiled after my first experiment on 
-    <a href="http://community-lab.net/">Community Lab</a> testbed, a project which I am a former developer of.
+    <a href="http://community-lab.net/">Community Lab</a> testbed, a project of which I am a former developer.
 </p>
 
 
 1. **Change your mindset, think big**
-
-    *"You don't have a bunch of slivers, you have a distributed system"*
+    
+    Don't treat slivers as individual machines, but as a single distributed system (slice).
+    
+    Automate *everything*, you don't want to manually login into any sliver.
     
     Create large slices to compensate for offline nodes and other failures.
     
-    Automate *everything*, you don't want to manually login into any sliver.
+    Read [The Seven Deadly Sins of Distributed Systems](https://www.usenix.org/events/worlds04/tech/full_papers/muir/muir.pdf)
 
 
 2. **Make your experiments idempotent**
@@ -28,19 +30,23 @@ date: 2014/05/06
 
 3. **Use concurrency for experiment deployment and for collecting results**
 
-    You *really* don't want to sequentially wait for half of your slivers to timeout their SSH connections.
+    You *really* don't want to sequentially wait for offline slivers to timeout their SSH connections.
     
-    Use scripting languages like Bash. Bash integrates process management into the language itself.
-    Just imagine how this will look like if written in something like Java's threading library:
+    Use scripting languages like Bash. Bash integrates process management into the language itself:
     
     ```bash
     cat sliver-mgmt-ip.list | while read IP; do
-        {
-          scp -o stricthostkeychecking=no experiment.sh root@[$IP]: &&
-          ssh root@$IP "nohup bash experiment.sh" ;
-        } &
+      # The following block will run concurrently, because of the ending &
+      {
+        # Kill possible running experiments
+        ssh -o stricthostkeychecking=no root@$IP "pkill -f experiment.sh"
+        # Install and start on background
+        scp experiment.sh root@[$IP]: &&
+        ssh root@$IP "nohup bash experiment.sh"
+      } &
     done
     ```
+
 
 4. **CONFINE REST API doesn't love you too much**
 
@@ -78,6 +84,7 @@ date: 2014/05/06
                 break
     ```
 
+
 5. **Pre-compile things on your own i686 virtual machine**
 
     Common sliver free space is arround ~700MB, which may be not enough for installing required dev libraries and compiling your average C++ application.
@@ -94,14 +101,14 @@ date: 2014/05/06
 
 7. **Common development tools and network utils are missing :(**
 
-    For sure your `experiment.sh` will start with something like this (and hope for Internet connectivity being available too):
+    For sure your first `experiment.sh` will start with something like this (and hope for Internet connectivity being available too):
     
     ```bash
     apt-get update && \
     apt-get install -y inetutils-ping git traceroute tcpdump nano strace screen
     ```
     
-    Also you can [create your own sliver templates](https://wiki.confine-project.eu/soft:debian-template), but most probably you'll have to learn a few things that you don't want to.
+    Also you can [create your own sliver templates](https://wiki.confine-project.eu/soft:debian-template), but most probably you'll have to learn a few things that you didn't want to.
 
 
 8. **Did you forgot to set the slice state to start?**
