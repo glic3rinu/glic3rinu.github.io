@@ -94,7 +94,7 @@ function visualize_query(id) {
             Reveal.up();
             Reveal.down();
             Reveal.addEventListener('perform-query-'+ id, functions[id]);
-	        console.log( 'perform-query-'+ id );
+//	        console.log( 'perform-query-'+ id );
 	      return {children: classes};
 	    }
 
