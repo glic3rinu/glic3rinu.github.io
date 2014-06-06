@@ -210,9 +210,85 @@ MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
 
 
                 <section>
+                    <section>
+                        <h2>#5. Most cited trademarks by top languages</h2>
+                        <pre><code id="query-5" data-trim contenteditable>
+MATCH (User)
+    RETURN User.lang, count(User.lang)
+    ORDER BY count(User.lang) DESC
+    LIMIT 3
+
+FOREACH lang in ['en', 'es', 'ca']
+    MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
+        WHERE Word.is_trademark = true AND User.lang = lang
+        WITH Word, count(DISTINCT User) AS users
+        RETURN Word, users ORDER BY users DESC
+        LIMIT 25
+
+MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
+    WHERE Word.is_trademark = true AND NOT User.lang IN ['es', 'en', 'ca']
+    WITH Word, count(DISTINCT User) AS users
+    RETURN Word, users ORDER BY users DESC
+    LIMIT 25
+                        </code></pre>
+                        <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
+                    </section>
+                    <section data-state="perform-query-5">
+                        <h3>#4. Most cited trademarks by top languages</h3>
+                        <div class=placeholder id="chart-5"></div>
+                    </section>
+                </section>
+
+
+                <section>
+                    <section>
+                        <h2>#6. Related trademarks</h2>
+                        <pre><code id="query-6" data-trim contenteditable>
+MATCH (Tweet)-[appears]->(Word)
+    WHERE Word.value IN ['nokia','samsung','huawei','sony','facebook','intel','nsn','lg','ibm','gsma','mozilla','nfc','lenovo','ericsson','m2m','alcatel','mastercard','broadband','qualcomm','cisco','acer','alcatel-lucent','sdn','accenture','sandisk','visa','mcafee','nexus','fitbit','wiko','symantec','seven','juniper','yota','cnet','mediatek','fujitsu','silicon','telenor','panasonic','ukti','shazam','ieee','syniverse','amd','emporia','vmware','shenzhen','sun','kaspersky','w3c','plantronics','oracle','avg','verizon','logic','citrix','twilio','trukcell','broadcom','unisys','kyocera','tiendeo','ingenico','siemens','bloomberg','firefox','htc','global','tizen','jolla','geeksphone','asus','google','android','apple','amazon','paypal','microsoft','motorola','upc','fairphone','rim','blackberry','sanyo','toshiba','benq']
+    WITH DISTINCT Tweet,Word
+    MATCH (Word2)<-[appears]-(Tweet)
+        WHERE Word2.is_tradermark = true and Word.value <> Word2.value
+        RETURN Word2.value as name, Word.value as name2, count(Word2) as size
+                        </code></pre>
+                        <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
+                    </section>
+                    <section data-state="perform-query-6">
+                        <h3>#6. Related trademarks</h3>
+                        <div class=placeholder id="chart-6"></div>
+                    </section>
+                </section>
+
+
+                <section>
+                    <section>
+                        <h2>#7. Positive and negative keywords </h2>
+                        <pre><code id="query-7" data-trim contenteditable>
+# Additional queries are needed to classificate words
+
+MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
+    WHERE Word2.classification = 'positive' AND Word.is_tradermark = true
+    RETURN Word.value AS name, count(Tweet) AS size
+    ORDER BY count(Tweet) DESC
+    LIMIT 20
+                        </code></pre>
+                        <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
+                    </section>
+                    <section data-state="perform-query-7.1">
+                        <h3>#7.1. Positive keywords</h3>
+                        <div class=placeholder id="chart-7.1"></div>
+                    </section>
+                    <section data-state="perform-query-7.2">
+                        <h3>#7.2. Negative keywords</h3>
+                        <div class=placeholder id="chart-7.2"></div>
+                    </section>
+                </section>
+
+
+                <section>
                     <h2>Wrapping Up</h2>
                     <ul>
-                        <li>We have seen that, after all the <a href="http://en.wikipedia.org/wiki/Hype_cycle">hype</a> and <a hrerf="http://hiredbrains.wordpress.com/2012/09/07/nosql-whats-the-buzz-about-graph-databases/">buzz</a>, NoSQL Graph Databases are still useful, <strong>specialy in combination with web technologies</strong></li>
+                        <li>We have seen that, after all the <a href="http://en.wikipedia.org/wiki/Hype_cycle">hype</a> and <a href="http://hiredbrains.wordpress.com/2012/09/07/nosql-whats-the-buzz-about-graph-databases/">buzz</a>, NoSQL Graph Databases are still useful, <strong>specialy in combination with web technologies</strong></li>
                         <li>This is a <strong>first contact</strong> with the MWC twitter dataset, further analysis is requiered in order to extract more meaningful information</li>
                     </ul>
                 </section>
