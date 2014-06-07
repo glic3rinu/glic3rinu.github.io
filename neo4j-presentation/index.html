@@ -59,12 +59,13 @@
                 </section>
 
 
-                <section data-background="images/logo-white.svg" style="background-color:rgb(63, 63, 63);  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all .2s linear;
-  -moz-transition: all .2s linear;
-  -ms-transition: all .2s linear;
-  -o-transition: all .2s linear;
-">
+                <section data-background="images/logo-white.svg" style="
+                        background-color:rgb(63, 63, 63);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+                            -webkit-transition: all .2s linear;
+                            -moz-transition: all .2s linear;
+                            -ms-transition: all .2s linear;
+                            -o-transition: all .2s linear;">
                     <h2>What is Neo4j?</h2>
                     <p>An open-source graph database, implemented in Java.</p>
                     <p><i>&ldquo;Embedded, disk-based, fully transactional Java persistence engine that stores data structured in graphs rather than in tables&rdquo;</i></p>
@@ -74,17 +75,17 @@
                     <section>
                         <h2>What is wrong whit traditional Relational Databases?</h2>
                         <p><strong>Nothing serious</strong></p>
-                        <p>Relational databases can model graphs pretty well. <br>
-                            However, <br>
-                            graph databases are stronger in <strong>one particular aspect</strong>.</p>
-            <p><small>Press <a href="#" class="navigate-down">down</a> to find more.</small></p>
+                        <p>Relational databases can model graphs pretty well.</p>
+                        <p>However,<br>
+                            graph databases are stronger in <strong>one particular aspect</strong> ...</p>
+                        <p><small>Press <a href="#" class="navigate-down">down</a> to find more.</small></p>
 
                     </section>
                     <section>
                         <h3>Is it performance?</h3>
                         <p><strong>Not really</strong></p>
                         <p><a href="http://java.dzone.com/articles/mysql-vs-neo4j-large-scale">Some people</a> argue that performance issues may arise on <a href="http://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a> when dealing with billions of rows and relations,<br>
-                        but benchmarks are always <a href="https://baach.de/Members/jhb/neo4j-performance-compared-to-mysql/view">controversial</a>.</p>
+                            but benchmarks are always <a href="https://baach.de/Members/jhb/neo4j-performance-compared-to-mysql/view">controversial</a>.</p>
                     </section>
                     <section>
                         <h3>Is it scaling?</h3>
@@ -97,21 +98,21 @@
                         <p><a href="http://www.neo4j.org/learn/cypher">Cypher</a> is a great Graph Query Language,
                         <br>the problem is that each graph database uses its <strong>own language</strong></p>
                         <p><a href="http://www.neo4j.org/develop/drivers">Programatic APIs</a> are a more popular option, <br>
-                        acting as an abstraction layer that allows writing<br> database agnostinc queries.
+                            acting as an abstraction layer that allows writing<br> database agnostinc queries.
                         <p>Like an <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a>, but for graphs.</p>
                     </section>
                     <section>
                         <h3>What is it then?</h3>
                         <p><strong>Relational databases have a higher barrier to entry</strong></p>
                         <p>With Neo4j you can load your dataset, perform queries, visualize them with <a href="http://d3js.org/">D3.js</a> and
-                    integrate the results on a fancy <a href="http://lab.hakim.se/reveal-js">HTML presentation</a> in <strong>no time</strong>.</p>
+                            integrate the results on a fancy <a href="http://lab.hakim.se/reveal-js">HTML presentation</a> in <strong>no time</strong>.</p>
                     </section>
                 </section>
 
 
                 <section data-background="images/twitter-logo-blue.svg">
                     <h2>Our dataset</h2>
-                    <h3> Tweets with MWC #hashtag </h3>
+                    <h3>Tweets with MWC #hashtag</h3>
                     <p>11810 tweets from 7195 users sent during the 3 days of the WMC 2014 in Barcelona area.</p>
                 </section>
 
@@ -143,7 +144,7 @@ MATCH (Tweet)-[:appears]->(Word)
                         </code></pre>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
-                    <section  data-state="perform-query-1">
+                    <section data-state="perform-query-1">
                         <h3>#1. Most Mentioned Trademarks</h3>
                         <div class="chart" id="chart-1"></div>
                     </section>
@@ -211,7 +212,7 @@ MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
 
                 <section>
                     <section>
-                        <h2>#5. Most cited trademarks by top languages</h2>
+                        <h2>#5. Most cited trademarks <br>by top languages</h2>
                         <pre><code id="query-5" data-trim contenteditable>
 MATCH (User)
     RETURN User.lang, count(User.lang)
