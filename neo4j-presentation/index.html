@@ -1,4 +1,4 @@
-<!doctype html>
+ç<!doctype html>
 <html lang="en">
 
     <head>
@@ -72,7 +72,7 @@
                     <p>Neo4j is the most popular graph database.</p>
                 </section>
                 <section>
-                    <section>
+                    <section data-background="images/arrow.png">
                         <h2>What is wrong whit traditional Relational Databases?</h2>
                         <p><strong>Nothing serious</strong></p>
                         <p>Relational databases can model graphs pretty well.</p>
@@ -81,18 +81,18 @@
                         <p><small>Press <a href="#" class="navigate-down">down</a> to find more.</small></p>
 
                     </section>
-                    <section>
+                    <section data-background="images/arrow.png">
                         <h3>Is it performance?</h3>
                         <p><strong>Not really</strong></p>
                         <p><a href="http://java.dzone.com/articles/mysql-vs-neo4j-large-scale">Some people</a> argue that performance issues may arise on <a href="http://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a> when dealing with billions of rows and relations,<br>
                             but benchmarks are always <a href="https://baach.de/Members/jhb/neo4j-performance-compared-to-mysql/view">controversial</a>.</p>
                     </section>
-                    <section>
+                    <section data-background="images/arrow.png">
                         <h3>Is it scaling?</h3>
                         <p><strong>Graph databases don't scale <i>that</i> well</strong><p>
                         <img src="images/graphs.png">
                     </section>
-                    <section>
+                    <section data-background="images/arrow.png">
                         <h3>What about the query language?</h3>
                         <p><strong>Is not really relevant</strong></p>
                         <p><a href="http://www.neo4j.org/learn/cypher">Cypher</a> is a great Graph Query Language,
@@ -117,7 +117,7 @@
                 </section>
 
 
-                <section>
+                <section >
                     <section>
                         <h2>Graph Model</h2>
                         <p>Nodes and Relations</p>
@@ -131,7 +131,7 @@
                 </section>
 
 
-                <section class="visualizer-section">
+                <section>
                     <section>
                         <h2>#1. Most Mentioned Trademarks</h2>
                         <pre><code id="query-1" data-trim contenteditable>
@@ -201,6 +201,8 @@ MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
     ORDER BY trademarks DESC
     LIMIT 25
                         </code></pre>
+                        <p><small>Suggestion, get users with disctinct trademarks by adding a <code>DISTINCT</code> statement on <code>count()</code><br>
+                           <code>count(DISTINCT Word)</code></small><p>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
                     <section data-state="perform-query-4">
@@ -246,11 +248,12 @@ MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
                         <h2>#6. Related trademarks</h2>
                         <pre><code id="query-6" data-trim contenteditable>
 MATCH (Tweet)-[appears]->(Word)
-    WHERE Word.value IN ['nokia','samsung','huawei','sony','facebook','intel','nsn','lg','ibm','gsma','mozilla','nfc','lenovo','ericsson','m2m','alcatel','mastercard','broadband','qualcomm','cisco','acer','alcatel-lucent','sdn','accenture','sandisk','visa','mcafee','nexus','fitbit','wiko','symantec','seven','juniper','yota','cnet','mediatek','fujitsu','silicon','telenor','panasonic','ukti','shazam','ieee','syniverse','amd','emporia','vmware','shenzhen','sun','kaspersky','w3c','plantronics','oracle','avg','verizon','logic','citrix','twilio','trukcell','broadcom','unisys','kyocera','tiendeo','ingenico','siemens','bloomberg','firefox','htc','global','tizen','jolla','geeksphone','asus','google','android','apple','amazon','paypal','microsoft','motorola','upc','fairphone','rim','blackberry','sanyo','toshiba','benq']
-    WITH DISTINCT Tweet,Word
+    WHERE Word.is_tradermark = true
+    WITH DISTINCT Tweet, Word
     MATCH (Word2)<-[appears]-(Tweet)
         WHERE Word2.is_tradermark = true and Word.value <> Word2.value
-        RETURN Word2.value as name, Word.value as name2, count(Word2) as size
+        WITH Word2.value as name, Word.value as name2, count(Word2) as size
+        RETURN name, name2, size
                         </code></pre>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
@@ -265,14 +268,13 @@ MATCH (Tweet)-[appears]->(Word)
                     <section>
                         <h2>#7. Positive and negative keywords </h2>
                         <pre><code id="query-7" data-trim contenteditable>
-# Additional queries are needed to classificate words
-
 MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
-    WHERE Word2.classification = 'positive' AND Word.is_tradermark = true
+    WHERE Word2.classification = "positive" AND Word.is_tradermark = true
     RETURN Word.value AS name, count(Tweet) AS size
     ORDER BY count(Tweet) DESC
     LIMIT 20
                         </code></pre>
+			<p>Notice that <a href="classification-queries.txt">additional queries</a> are needed for word classification</p>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
                     <section data-state="perform-query-7.1">
@@ -289,8 +291,8 @@ MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
                 <section>
                     <h2>Wrapping Up</h2>
                     <ul>
-                        <li>We have seen that, after all the <a href="http://en.wikipedia.org/wiki/Hype_cycle">hype</a> and <a href="http://hiredbrains.wordpress.com/2012/09/07/nosql-whats-the-buzz-about-graph-databases/">buzz</a>, NoSQL Graph Databases are still useful, <strong>specialy in combination with web technologies</strong></li>
-                        <li>This is a <strong>first contact</strong> with the MWC twitter dataset, further analysis is requiered in order to extract more meaningful information</li>
+                        <li>We have seen that, after all the <a href="http://en.wikipedia.org/wiki/Hype_cycle">hype</a> and <a href="http://hiredbrains.wordpress.com/2012/09/07/nosql-whats-the-buzz-about-graph-databases/">buzz</a>, NoSQL Graph Databases have still value, <strong>specialy when combined with web technologies</strong></li>
+                        <li>This is a <strong>preliminar analysis</strong> of the MWC'14 twitter dataset, further analysis is requiered in order to extract more valuable information out of this data</li>
                     </ul>
                 </section>
 
@@ -302,7 +304,7 @@ MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
                 </section>
 
 
-                <section>
+                <section data-background="#4d7e65">
                     <img src="images/comic.jpg" style="margin-top: -100px; padding:30px; max-width: 100%; max-height: 110%;">
                 </section>
 

@@ -1,0 +1,63 @@
+MATCH (a)-[:twitted_by]-(b)-[:appears]->(c) 
+    WHERE c.value IN ['nokia','samsung','huawei','sony','facebook','intel','nsn','lg','ibm','gsma','mozilla','nfc','lenovo','ericsson','m2m','alcatel','mastercard','broadband','qualcomm','cisco','acer','alcatel-lucent','sdn','accenture','sandisk','visa','mcafee','nexus','fitbit','wiko','symantec','seven','juniper','yota','cnet','mediatek','fujitsu','silicon','telenor','panasonic','ukti','shazam','ieee','syniverse','amd','emporia','vmware','shenzhen','sun','kaspersky','w3c','plantronics','oracle','avg','verizon','logic','citrix','twilio','trukcell','broadcom','unisys','kyocera','tiendeo','ingenico','siemens','bloomberg','firefox','htc','global','tizen','jolla','geeksphone','asus','google','android','apple','amazon','paypal','microsoft','motorola','upc','fairphone','rim','blackberry','sanyo','toshiba','benq']
+    CREATE (a)-[:MENTIONS]->(c)
+    RETURN c.value;
+
+
+MATCH (a)-[:`twitted_by`]-(b)-[:`appears`]->(c) 
+    WHERE c.value IN ['nokia','samsung','huawei','sony','facebook','intel','nsn','lg','ibm','gsma','mozilla','nfc','lenovo','ericsson','m2m','alcatel','mastercard','broadband','qualcomm','cisco','acer','alcatel-lucent','sdn','accenture','sandisk','visa','mcafee','nexus','fitbit','wiko','symantec','seven','juniper','yota','cnet','mediatek','fujitsu','silicon','telenor','panasonic','ukti','shazam','ieee','syniverse','amd','emporia','vmware','shenzhen','sun','kaspersky','w3c','plantronics','oracle','avg','verizon','logic','citrix','twilio','trukcell','broadcom','unisys','kyocera','tiendeo','ingenico','siemens','bloomberg','firefox','htc','global','tizen','jolla','geeksphone','asus','google','android','apple','amazon','paypal','microsoft','motorola','upc','fairphone','rim','blackberry','sanyo','toshiba','benq']
+    CREATE (a)-[:MENTIONS]->(t:Trademark {company: c.value})<-[:CITED]-(b)
+    RETURN t
+
+
+MATCH (w:Word)
+    SET w.classification = 'neutral'
+    RETURN w;
+
+
+MATCH (w:Word)
+    WHERE w.value IN ['good','fine','acceptable','bad','excellent','exceptional','favorable','great','marvelous','positive','satisfactory','satisfying','superb','valuable','wonderful','ace','boss','bully','capital','choice','crack','nice','pleasing','prime','rad','sound','spanking','sterling','super','superior','welcome','worthy','admirable','agreeable','commendable','congenial','deluxe','first-class','first-rate','gnarly','gratifying','honorable','neat','precious','recherché','reputable','select','shipshape','splendid','stupendous','super-eminent','super-excellent','tip-top','up to snuff','smart','intelligent']
+    SET w.classification = 'positive'
+    RETURN w;
+
+
+MATCH (w:Word)
+    WHERE w.value IN ['bad','atrocious','awful','cheap','crummy','dreadful','lousy','poor','rough','sad','unacceptable','blah','bummer','diddly','downer','garbage','gross','imperfect','inferior','junky','synthetic','abominable','amiss','bad news','beastly','bottom out','careless','cheesy','crappy','cruddy','defective','deficient','dissatisfactory','erroneous','fallacious','faulty','godawful','grody','grungy','icky','inadequate','incorrect','not good','off','raunchy','slipshod','stinking','substandard','the pits','unsatisfactory','abhorrent','atrocious','awful','bad','base','beastly','contemptible','cursed','','despicable','disgusting','foul','grim','grody','gross','hairy','hateful','','heinous','hellish','horrible','horrid','loathsome','lousy','nauseating','obnoxious','','odious','offensive','repellent','reprehensible','repugnant','repulsive','revolting','rotten','','sleazy','stinking','terrible','vile','wretchedì']
+    SET w.classification = 'negative'
+    RETURN w;
+
+
+MATCH (w:Word)<-[:appears]-(t:Twitt)-[:CITED]->(tr:Trademark),
+    (t)-[:twitted_by]->(u:User)
+    WHERE w.classification='positive'
+    RETURN DISTINCT u.name AS user, tr.company AS name_company,count(w) AS positive_comment
+    ORDER BY count(w) desc
+
+
+# Count positive and negative tweets of each user to analyse if the user is tends to make positive or negative comments
+# Histogram
+MATCH (w:Word)<-[:appears]-(t:Twitt)-[:CITED]->(tr:Trademark),
+    (t)-[:twitted_by]->(u:User)
+    WHERE w.classification='positive' or w.classification='negative'
+    RETURN u.name, w.classification, count(w)
+    ORDER BY u.name
+
+
+# Return positive comment of a company [iphone,galaxy,nexus,htc,xperia]
+MATCH (n:`Word`)<-[:appears]-(t:Twitt)-[:appears]->(w:Word), (tr:Trademark)
+    WHERE n.value in tr AND w.classification = 'positive'
+    RETURN n, count(t), w
+
+
+# Return positive comment of a product [iphone,galaxy,nexus,htc,xperia] with model
+MATCH (n:`Word`)<-[:appears]-(t:Twitt)-[:appears]->(w:Word),
+    (t:Twitt)-[:appears]->(x:Word)
+    WHERE n.value='product' AND x.value='model' AND w.classification='positive'
+    RETURN n,t
+
+
+MATCH (n:`Word`)<-[:appears]-(t:Twitt)-[:appears]->(w:Word)
+    WHERE w.classification = 'positive' AND n.is_tradermark = true
+    RETURN n.value as name,count(t) as size
+    ORDER BY count(t) DESC
+    LIMIT 20
