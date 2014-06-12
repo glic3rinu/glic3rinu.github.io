@@ -46,16 +46,22 @@
     <body>
 
         <div class="reveal">
-
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Neo4j - Graph Database</h1>
-                    <h3>Twitter Dataset Visualization</h3>
-                    <p>
-                        <small>Created by <br>
-                        <a href="mailto:ruben.hervas@est.fib.upc.edu">Ruben Hervas</a>, <a href="mailto:alessio.conese@est.fib.upc.edu">Alessio Conese</a> and <a href="mailto:marc.aymerich@est.fib.upc.edu">Marc Aymerich</a></small>
-                    </p>
+                    <h1 style="margin-top:9%">Twitter Dataset<br> Visualization</h1>
+                    <h2>With</small> <a href="http://www.neo4j.org/">Neo4j</a>, <a href="http://d3js.org/">D3.js</a> and <a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></h2>
+                    <br>
+                    <h4><small>Created by</small> <a href="mailto:ruben.hervas@est.fib.upc.edu">Ruben Hervas</a> <small>and</small> <a href="mailto:alessio.conese@est.fib.upc.edu">Alessio Conese</a><br>
+                    <small>and</small> <a href="mailto:marc.aymerich@est.fib.upc.edu">Marc Aymerich</a><br>
+                    <small>Supervised by</small> <a href="http://www.jorditorres.org/">Jordi Torres</a> <small>and</small> <a href="http://people.ac.upc.edu/nin/">Jordi Nin</a>
+                    <br>
+                    <small>for</small> <a href="http://www.fib.upc.edu/en/masters/miri/syllabus.html?assig=CLC-MIRI">Cloud Comuputing</a> <small>a course from</small> <a href="http://www.fib.upc.edu/fib.html">FIB UPC</a></h4>
+                    <h4><small>&copy; 2014 - Some rights reserved</small></h4>
+<!--                    <p>-->
+<!--                        <small>Created by <br>-->
+<!--                        <a href="mailto:ruben.hervas@est.fib.upc.edu">Ruben Hervas</a>, <a href="mailto:alessio.conese@est.fib.upc.edu">Alessio Conese</a> and <a href="mailto:marc.aymerich@est.fib.upc.edu">Marc Aymerich</a></small>-->
+<!--                    </p>-->
                 </section>
 
 
@@ -71,6 +77,7 @@
                     <p><i>&ldquo;Embedded, disk-based, fully transactional Java persistence engine that stores data structured in graphs rather than in tables&rdquo;</i></p>
                     <p>Neo4j is the most popular graph database.</p>
                 </section>
+
                 <section>
                     <section data-background="images/arrow.png">
                         <h2>What is wrong whit traditional Relational Databases?</h2>
@@ -79,19 +86,21 @@
                         <p>However,<br>
                             graph databases are stronger in <strong>one particular aspect</strong> ...</p>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to find more.</small></p>
-
                     </section>
+
                     <section data-background="images/arrow.png">
                         <h3>Is it performance?</h3>
                         <p><strong>Not really</strong></p>
                         <p><a href="http://java.dzone.com/articles/mysql-vs-neo4j-large-scale">Some people</a> argue that performance issues may arise on <a href="http://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a> when dealing with billions of rows and relations,<br>
                             but benchmarks are always <a href="https://baach.de/Members/jhb/neo4j-performance-compared-to-mysql/view">controversial</a>.</p>
                     </section>
+
                     <section data-background="images/arrow.png">
                         <h3>Is it scaling?</h3>
                         <p><strong>Graph databases don't scale <i>that</i> well</strong><p>
                         <img src="images/graphs.png">
                     </section>
+
                     <section data-background="images/arrow.png">
                         <h3>What about the query language?</h3>
                         <p><strong>Is not really relevant</strong></p>
@@ -101,11 +110,19 @@
                             acting as an abstraction layer that allows writing<br> database agnostinc queries.
                         <p>Like an <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a>, but for graphs.</p>
                     </section>
-                    <section>
+
+                    <section data-background="images/flowers-background.png" style="
+                        background-color:rgba(63, 63, 63, .9);
+			padding: 70px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+                            -webkit-transition: all .2s linear;
+                            -moz-transition: all .2s linear;
+                            -ms-transition: all .2s linear;
+                            -o-transition: all .2s linear;">
                         <h3>What is it then?</h3>
                         <p><strong>Relational databases have a higher barrier to entry</strong></p>
-                        <p>With Neo4j you can load your dataset, perform queries, visualize them with <a href="http://d3js.org/">D3.js</a> and
-                            integrate the results on a fancy <a href="http://lab.hakim.se/reveal-js">HTML presentation</a> in <strong>no time</strong>.</p>
+                        <p>With Neo4j you can <a href="scripts/generate-graph.py">load your dataset</a>, <a href="images/neo-screenshot.png">perform queries</a>, <a href="js/scripts.js">visualize them</a> with <a href="http://d3js.org/">JavaScript libraries</a> and
+                            <a href="index.html.txt">integrate</a> the results on a fancy <a href="http://lab.hakim.se/reveal-js">HTML presentation</a> in <strong>no time</strong>.</p>
                     </section>
                 </section>
 
@@ -123,6 +140,7 @@
                         <p>Nodes and Relations</p>
                         <img src="images/schema.png" >
                     </section>
+
                     <section>
                         <h2>Graph Model</h2>
                         <p>Node Properties</p>
@@ -155,6 +173,7 @@ MATCH (Tweet)-[:appears]->(Word)
                         </code></pre>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
+
                     <section data-state="perform-query-1">
                         <h3>#1. Most Mentioned Trademarks</h3>
                         <div class="chart" id="chart-1"></div>
@@ -175,6 +194,7 @@ MATCH (User)<-[:twitted_by]-(Twit)-[a:appears]->(Word)
                         </code></pre>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
+
                     <section data-state="perform-query-2">
                         <h3>#2. Most Mentioned Trademarks Tweeted by Different Users</h3>
                         <div class=placeholder id="chart-2"></div>
@@ -194,6 +214,7 @@ MATCH (Tweet)-[:twitted_by]->(User)
                         </code></pre>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
+
                     <section data-state="perform-query-3">
                         <h3>#3. Most Active Users</h3>
                         <div class=placeholder id="chart-3"></div>
@@ -216,6 +237,7 @@ MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
                            <code>count(DISTINCT Word)</code></small><p>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
+
                     <section data-state="perform-query-4">
                         <h3>#4. Users that Mention more Trademarks</h3>
                         <div class=placeholder id="chart-4"></div>
@@ -226,11 +248,13 @@ MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
                 <section>
                     <section>
                         <h2>#5. Most cited trademarks <br>by top languages</h2>
-                        <pre><code id="query-5" data-trim contenteditable>
+                        <pre><code id="query-5" data-trim contenteditable style="max-height: none">
 MATCH (User)
     RETURN User.lang, count(User.lang)
     ORDER BY count(User.lang) DESC
     LIMIT 3
+
+# RESULT: en 3734, es 2103, ca 354
 
 FOREACH lang in ['en', 'es', 'ca']
     MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
@@ -240,13 +264,14 @@ FOREACH lang in ['en', 'es', 'ca']
         LIMIT 25
 
 MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
-    WHERE Word.is_trademark = true AND NOT User.lang IN ['es', 'en', 'ca']
+    WHERE Word.is_trademark = true AND NOT User.lang IN ['en', 'es', 'ca']
     WITH Word, count(DISTINCT User) AS users
     RETURN Word, users ORDER BY users DESC
     LIMIT 25
                         </code></pre>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
+
                     <section data-state="perform-query-5">
                         <h3>#4. Most cited trademarks by top languages</h3>
                         <div class=placeholder id="chart-5"></div>
@@ -257,7 +282,7 @@ MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
                 <section>
                     <section>
                         <h2>#6. Related trademarks</h2>
-                        <pre><code id="query-6" data-trim contenteditable>
+                        <pre><code id="query-6" data-trim contenteditable style="overflow: visible">
 MATCH (Tweet)-[appears]->(Word)
     WHERE Word.is_tradermark = true
     WITH DISTINCT Tweet, Word
@@ -268,6 +293,7 @@ MATCH (Tweet)-[appears]->(Word)
                         </code></pre>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
+
                     <section data-state="perform-query-6">
                         <h3>#6. Related trademarks</h3>
                         <div class=placeholder id="chart-6"></div>
@@ -288,6 +314,7 @@ MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
 			<p><small>Notice that <a href="classification-queries.txt">additional queries</a> are needed for word classification</small></p>
                         <p><small>Press <a href="#" class="navigate-down">down</a> to see the visualization.</small></p>
                     </section>
+
                     <section data-state="perform-query-7.1">
                         <h3>#7.1. Positive keywords</h3>
                         <div class=placeholder id="chart-7.1"></div>
@@ -302,8 +329,9 @@ MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
                 <section data-background="#007777">
                     <h2>Wrapping Up</h2>
                     <ul>
-                        <li>We have seen that, after all the <a href="http://en.wikipedia.org/wiki/Hype_cycle">hype</a> and <a href="http://hiredbrains.wordpress.com/2012/09/07/nosql-whats-the-buzz-about-graph-databases/">buzz</a>, NoSQL Graph Databases still <strong>hold value</strong>, <strong>specialy when combined with web technologies</strong></li>
-                        <li>This is a <strong>preliminar analysis</strong> of the MWC'14 twitter dataset. Further analysis is likely to unveil <strong>valuable information</strong> hidden on the dataset</li>
+                        <li>We have seen that, after all the <a href="http://en.wikipedia.org/wiki/Hype_cycle"><strong>hype</strong></a> and <a href="http://hiredbrains.wordpress.com/2012/09/07/nosql-whats-the-buzz-about-graph-databases/"><strong>buzz</strong></a>, NoSQL Graph Databases <strong>hold real value</strong>, <strong>specialy when combined with web technologies</strong></li>
+                        <li>We have extracted relevant information with a <strong>simple and preliminar analysis</strong> of the MWC'14 twitter dataset</li>
+                        <li>But, further analysis is likely to unveil more <strong>valuable information</strong> that hides inside this dataset</li>
                     </ul>
                 </section>
 
