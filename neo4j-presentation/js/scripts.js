@@ -507,6 +507,11 @@ function visualize_query(id) {
 			      }
 
 			      recurse(null, root);
+                	Reveal.removeEventListener('perform-query-'+ id, functions[id], false);
+		            Reveal.up();
+	            	Reveal.down();
+    	        	Reveal.addEventListener('perform-query-'+ id, functions[id]);
+
 			      return {children: classes};
 			    }
 
