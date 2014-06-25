@@ -451,11 +451,36 @@ function visualize_query(id) {
 		    		      .attr("x", function(d) { return x(d.letter)+x.rangeBand()*0.05; })
 		    		      .attr("width", x.rangeBand()*0.9)
 		    		      .attr("y", function(d) { return y(d.frequency); })
-		    		      .attr("height", function(d) { return height - y(d.frequency); });
+		    		      .attr("height", function(d) { return height - y(d.frequency); })
 
+							.on("mouseover", function() {
+					            console.log('hola');
+					            this.parentNode.appendChild(this); // workaround for bringing elements to the front (ie z-index)
+					            d3.select(this)
+					                .select(".background")
+					                .style("stroke", "white");
+					        })
+					        .on("mouseout", function() {
+					            console.log('adeu');
+					            d3.select(this)
+					                .select(".background")
+					                .style("stroke", "black");
+					        })
+		    		      .style("fill", function(d) {
+			        	  var number1 = Math.floor(Math.random() * 255);
+			        	  var number2 = Math.floor(Math.random() * 255);
+			        	  var number3 = Math.floor(Math.random() * 255);
+			        	  return d3.rgb(number1,number2,number3); });;
+			        console.log('EOOAEIROAEIROAIEROIAEIROAEIR');
+			        var id_func;
+					if (id == '7-1') {id_func='7'}else {id_func = '8'};
+					console.log('FUNCTION', functions[id]);
+					Reveal.removeEventListener('perform-query-'+ id, functions[id_func], false);
+			        Reveal.up();
+			    	Reveal.down();
+			    	Reveal.addEventListener('perform-query-'+ id, functions[id]);
 
-
-		    		function type(d) {
+			    	function type(d) {
 		    		  d.frequency = +d.frequency;
 		    		  return d;
 		    		}
@@ -550,7 +575,12 @@ function visualize_query(id) {
 			        .enter().append("path")
 			          .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
 			          .attr("class", "link")
-			          .attr("d", line);
+			          .attr("d", line)
+		    		      .style("fill", function(d) {
+			        	  var number1 = Math.floor(Math.random() * 255);
+			        	  var number2 = Math.floor(Math.random() * 255);
+			        	  var number3 = Math.floor(Math.random() * 255);
+			        	  return d3.rgb(number1,number2,number3); });;
 
 			      node = node
 			          .data(nodes.filter(function(n) { return !n.children; }))
@@ -560,10 +590,15 @@ function visualize_query(id) {
 			          .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
 			          .style("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
 			          .text(function(d) { return d.key; })
+	    		      .style("fill", function(d) {
+			        	  var number1 = Math.floor(Math.random() * 255);
+			        	  var number2 = Math.floor(Math.random() * 255);
+			        	  var number3 = Math.floor(Math.random() * 255);
+			        	  return d3.rgb(number1,number2,number3); })
+
 			          .on("mouseover", mouseovered)
 			          .on("mouseout", mouseouted);
 			   // });
-
 			    function mouseovered(d) {
 			      node
 			          .each(function(n) { n.target = n.source = false; });
@@ -634,6 +669,10 @@ function visualize_query(id) {
 
 			      return imports;
 			    }
+                	Reveal.removeEventListener('perform-query-'+ id, functions[id], false);
+		            Reveal.up();
+	            	Reveal.down();
+    	        	Reveal.addEventListener('perform-query-'+ id, functions[id]);
 
 		    }
 
@@ -671,8 +710,8 @@ $(document).ready(function(){
 	Reveal.addEventListener('perform-query-4', functions[4]);
 	Reveal.addEventListener('perform-query-5', functions[5]);
 	Reveal.addEventListener('perform-query-6', functions[6]);
-	Reveal.addEventListener('perform-query-7.1', functions[7]);
-	Reveal.addEventListener('perform-query-7.2', functions[8]);
+	Reveal.addEventListener('perform-query-7-1', functions[7]);
+	Reveal.addEventListener('perform-query-7-2', functions[8]);
 });
 
 //function removeQueryListener() {
