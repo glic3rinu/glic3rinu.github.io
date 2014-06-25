@@ -5,3 +5,15 @@ div {
 h2 {
 	text-align: center;
 }
+
+text {
+    font:16px sans-serif;
+}
+
+#chart-7-1 text {
+    font: 10px sans-serif;
+}
+
+#chart-7-2 text {
+    font: 10px sans-serif;
+}

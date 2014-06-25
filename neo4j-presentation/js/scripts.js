@@ -2,6 +2,9 @@ $(window).resize(function() {
     console.log('resize');
 });
 
+
+var requests = new Array();
+
 var data_languages = {
 	"en" : {},
 	"es" : {},
@@ -154,8 +157,16 @@ var C = get_language_td('es');
 var D = get_language_td('cat');
 var E = get_tuits_per_language();
 
+function abort_requests(){
+	for (var i = 0; i < requests.length; i++) {
+		requests[i].abort();
+	};
+}
+
 
 function perform_language_query(id){
+	abort_requests();
+	requests = [];
 	var languages_num_tuits;
 	$("#chart-"+id).prepend('<p><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
 
@@ -181,6 +192,8 @@ function perform_language_query(id){
   			console.log( "success" );
   			languages_num_tuits = data.data;
 		});
+        requests.push(aj1, aj2, aj3, aj4, aj5);
+
         $.when(aj1,aj2,aj3,aj4, aj5).done(function(a,b,c,d, e){
             var languages = new Array();
             var language_data = {
@@ -216,192 +229,14 @@ function perform_language_query(id){
 			};
 
 			make_graph(language_data, total_tuits, languages, id);
+			requests = [];
 	        });
 };
 
 
-function make_graph_related_trademarks(id){
-    var text = $("#query-"+id).text();
-   	$("#chart-"+id).prepend('<p><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
-	$.post( "http://graph.calmisko.org/db/data/cypher", { query: text}, function() {
-	  console.log( "success" );
-	})
-	  .done(function(data) {
-		var objJson={};
-	    var str=new Array();
-	    var map=new Array();
-	    var idx=0;//create the json data like "readme-flare-imports.json"
-	    for(var i=0; i < data.data.length; i++) {
-	    	if (map[data.data[i][0]]==undefined)
-		    	{map[data.data[i][0]]=idx;
-		    	idx++;
-		    	var idx_t=map[data.data[i][0]];
-		    	str[idx_t]={};
-		    	str[idx_t].name="class."+data.data[i][0];
-		    	str[idx_t].size=data.data[i][2];
-			    str[idx_t].imports=new Array();
-			    str[idx_t].imports[0]="class."+data.data[i][1];}
-		    else
-		    	{var idx_t=map[data.data[i][0]];
-		    	str[idx_t].size+=data.data[i][2];
-		    	var x=-1;
-		    	for (j=0;j<str[idx_t].imports.length;j++){
-		    		if ((str[idx_t].imports[j])==("class."+data.data[i][1])) 	x=1;
-		    		}
-		    	if (x==-1)
-		    		str[idx_t].imports[str[idx_t].imports.length]="class."+data.data[i][1];
-		    	}
-	    if (map[data.data[i][1]]==undefined)
-	    	{map[data.data[i][1]]=idx;
-	    	idx++;
-	    	var idx_t=map[data.data[i][1]];
-	    	str[idx_t]={};
-	    	str[idx_t].name="class."+data.data[i][1];
-	    	str[idx_t].size=data.data[i][2];
-		    str[idx_t].imports=new Array();
-		    str[idx_t].imports[0]="class."+data.data[i][0];}
-	    else
-	    	{var idx_t=map[data.data[i][1]];
-	    	str[idx_t].size+=data.data[i][2];
-	    	var x=-1;
-	    	for (j=0;j<str[idx_t].imports.length;j++){
-	    		if ((str[idx_t].imports[j])==("class."+data.data[i][0])) 	x=1;
-	    		}
-	    	if (x==-1)
-	    		str[idx_t].imports[str[idx_t].imports.length]="class."+data.data[i][0];
-	    	}
-
-
-	    }
-	    objJson=JSON.stringify(str);
-
-	    var diameter = 960,
-	    radius = diameter / 2,
-	    innerRadius = radius - 120;
-
-	    var cluster = d3.layout.cluster()
-	        .size([360, innerRadius])
-	        .sort(null)
-	        .value(function(d) { return d.size; });
-
-	    var bundle = d3.layout.bundle();
-
-	    var line = d3.svg.line.radial()
-	        .interpolate("bundle")
-	        .tension(.85)
-	        .radius(function(d) { return d.y; })
-	        .angle(function(d) { return d.x / 180 * Math.PI; });
-	    $("#chart-" +id).empty();
-	    var svg = d3.select("#chart-"+id).append("svg")
-	        .attr("width", diameter)
-	        .attr("height", diameter)
-	      .append("g")
-	        .attr("transform", "translate(" + radius + "," + radius + ")");
-
-	    var link = svg.append("g").selectAll(".link"),
-	        node = svg.append("g").selectAll(".node");
-
-	   var classes2=JSON.parse(objJson);
-	  //  d3.json("readme-flare-imports.json", function(error, classes) {
-	      var nodes = cluster.nodes(packageHierarchy(classes2)),
-	          links = packageImports(nodes);
-
-	      link = link
-	          .data(bundle(links))
-	        .enter().append("path")
-	          .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
-	          .attr("class", "link")
-	          .attr("d", line);
-
-	      node = node
-	          .data(nodes.filter(function(n) { return !n.children; }))
-	        .enter().append("text")
-	          .attr("class", "node")
-	          .attr("dy", ".31em")
-	          .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-	          .style("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-	          .text(function(d) { return d.key; })
-	          .on("mouseover", mouseovered)
-	          .on("mouseout", mouseouted);
-	   // });
-
-	    function mouseovered(d) {
-	      node
-	          .each(function(n) { n.target = n.source = false; });
-
-	      link
-	          .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
-	          .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-	        .filter(function(l) { return l.target === d || l.source === d; })
-	          .each(function() { this.parentNode.appendChild(this); });
-
-	      node
-	          .classed("node--target", function(n) { return n.target; })
-	          .classed("node--source", function(n) { return n.source; });
-	    }
-
-	    function mouseouted(d) {
-	      link
-	          .classed("link--target", false)
-	          .classed("link--source", false);
-
-	      node
-	          .classed("node--target", false)
-	          .classed("node--source", false);
-	    }
-
-	    d3.select(self.frameElement).style("height", diameter + "px");
-
-	    // Lazily construct the package hierarchy from class names.
-	    function packageHierarchy(classes) {
-	      var map = {};
-
-	      function find(name, data) {
-	        var node = map[name], i;
-	        if (!node) {
-	          node = map[name] = data || {name: name, children: []};
-	          if (name.length) {
-	            node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
-	            node.parent.children.push(node);
-	            node.key = name.substring(i + 1);
-	          }
-	        }
-	        return node;
-	      }
-
-	      classes.forEach(function(d) {
-	        find(d.name, d);
-	      });
-
-	      return map[""];
-	    }
-
-	    // Return a list of imports for the given array of nodes.
-	    function packageImports(nodes) {
-	      var map = {},
-	          imports = [];
-
-	      // Compute a map from name to node.
-	      nodes.forEach(function(d) {
-	        map[d.name] = d;
-	      });
-
-	      // For each import, construct a link from the source to target node.
-	      nodes.forEach(function(d) {
-	        if (d.imports) d.imports.forEach(function(i) {
-	          imports.push({source: map[d.name], target: map[i]});
-	        });
-	      });
-
-	      return imports;
-	    }
-	   });
-
-}
-
-
 function visualize_query(id) {
-
+	abort_requests();
+	requests = [];
 	if(id == 8){
 		id = 7;
     	var text = "MATCH (Word)<-[:appears]-(Tweet)-[:appears]->(Word2) \
@@ -418,7 +253,7 @@ function visualize_query(id) {
     	var text = $("#query-"+id).text();
    	}
    	$("#chart-"+id).prepend('<p><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
-	$.post( "http://graph.calmisko.org/db/data/cypher", { query: text}, function() {
+	var req = $.post( "http://graph.calmisko.org/db/data/cypher", { query: text}, function() {
 	  console.log( "success" );
 	})
 	  .done(function(data) {
@@ -476,11 +311,20 @@ function visualize_query(id) {
 			          .filter(function(d) { return !d.children; }))
 			        .enter().append("g")
 			          .attr("class", "node")
-			          .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+			          .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+			          .attr("stroke", "black");
 
 			      node.append("title")
 			          .text(function(d) { return d.className + ": " + format(d.value); });
 
+			       node.on("click", function(d) {
+        				alert(d.className);
+    				});
+
+
+			       node.on("hover", function(d) {
+        				alert(d.className);
+    				});
 			      node.append("circle")
 			          .attr("r", function(d) { return d.r; })
 			          .style("fill", function(d) {
@@ -493,7 +337,6 @@ function visualize_query(id) {
 			          .attr("dy", ".3em")
 			          .style("text-anchor", "middle")
 			          .text(function(d) { return d.className.substring(0, d.r / 3); });
-
 
 			    // Returns a flattened hierarchy containing all leaf nodes under the root.
 			    function classes(root) {
@@ -790,9 +633,11 @@ function visualize_query(id) {
 	    // $('h2').css('position', 'absolute');
 	    // $('h2').css('top', '0');
 //	    $(window).trigger("resize");
-
+		requests = [];
 
 	});
+	console.log('REQ ADDED');
+	requests.push(req);
 }
 
 var functions = {
