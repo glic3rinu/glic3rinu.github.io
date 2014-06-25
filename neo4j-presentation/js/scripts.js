@@ -312,7 +312,23 @@ function visualize_query(id) {
 			        .enter().append("g")
 			          .attr("class", "node")
 			          .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-			          .attr("stroke", "black");
+			          .attr("stroke", "black")
+			        .append("g")
+			        .attr("class", "cell child")
+
+			        .on("mouseover", function() {
+			            console.log('hola');
+			            this.parentNode.appendChild(this); // workaround for bringing elements to the front (ie z-index)
+			            d3.select(this)
+			                .select(".background")
+			                .style("stroke", "white");
+			        })
+			        .on("mouseout", function() {
+			            console.log('adeu');
+			            d3.select(this)
+			                .select(".background")
+			                .style("stroke", "black");
+			        });
 
 			      node.append("title")
 			          .text(function(d) { return d.className + ": " + format(d.value); });
@@ -322,9 +338,6 @@ function visualize_query(id) {
     				});
 
 
-			       node.on("hover", function(d) {
-        				alert(d.className);
-    				});
 			      node.append("circle")
 			          .attr("r", function(d) { return d.r; })
 			          .style("fill", function(d) {
