@@ -254,7 +254,7 @@ MATCH (User)
     ORDER BY count(User.lang) DESC
     LIMIT 3
 
-# RESULT: en 3734, es 2103, ca 354
+# RESULTS: [['en', 3734], ['es', 2103], ['ca', 354]]
 
 FOREACH lang in ['en', 'es', 'ca']
     MATCH (User)<-[:twitted_by]-(Tweet)-[a:appears]->(Word)
