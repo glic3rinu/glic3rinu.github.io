@@ -305,7 +305,7 @@ MATCH (Tweet)-[appears]->(Word)
                     <section>
                         <h2>#7. Positive and negative keywords </h2>
                         <pre><code id="query-7" data-trim contenteditable>
-MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
+MATCH (Word)<-[:appears]-(Tweet)-[:appears]->(Word2)
     WHERE Word2.classification = "positive" AND Word.is_tradermark = true
     RETURN Word.value AS name, count(Tweet) AS size
     ORDER BY count(Tweet) DESC
@@ -317,11 +317,11 @@ MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
 
                     <section data-state="perform-query-7.1">
                         <h3>#7.1. Positive keywords</h3>
-                        <div class=placeholder id="chart-7.1"></div>
+                        <div class=placeholder id="chart-7-1"></div>
                     </section>
                     <section data-state="perform-query-7.2">
                         <h3>#7.2. Negative keywords</h3>
-                        <div class=placeholder id="chart-7.2"></div>
+                        <div class=placeholder id="chart-7-2"></div>
                     </section>
                 </section>
 
@@ -355,6 +355,8 @@ MATCH (Word)<-[:appears]-(Tweett)-[:appears]->(Word2)
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>
 
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
         <script>
 
             // Full list of configuration options available here:
