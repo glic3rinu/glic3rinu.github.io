@@ -21,10 +21,10 @@ function get_tuits_per_language() {
 
 function get_language_td(lang) {
     var text = "MATCH (User)<-[:twitted_by]-(Twit)-[a:appears]->(Word) \
-    WHERE Word.is_tradermark = true AND User.lang = "+ lang + "WITH Word, count(DISTINCT User) AS users \
+    WHERE Word.is_tradermark = true AND User.lang = '"+lang+"' WITH Word, count(DISTINCT User) AS users \
     RETURN Word, users ORDER BY users DESC \
     LIMIT 25";
-	if(lang = "other") {
+	if(lang == "other") {
 		text = "MATCH (User)<-[:twitted_by]-(Twit)-[a:appears]->(Word) \
 		    WHERE Word.is_tradermark = true AND NOT User.lang IN ['es', 'en', 'ca'] \
 		    WITH Word, count(DISTINCT User) AS users \
