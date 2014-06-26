@@ -177,24 +177,24 @@ function perform_language_query(id){
 	$("#chart-"+id).prepend('<p id="feedback"><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
 
 	var
-        aj1 = $.post( "http://calmisko.org:7474/db/data/cypher", { query: A}, function(data) {
+        aj1 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: A}, function(data) {
   			console.log( "success" );
   			data_languages['other'] = data.data;
 		}),
-        aj2 = $.post( "http://calmisko.org:7474/db/data/cypher", { query: B}, function(data) {
+        aj2 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: B}, function(data) {
   			console.log( "success" );
   			data_languages['en'] = data.data
 		}),
-        aj3 = $.post( "http://calmisko.org:7474/db/data/cypher", { query: C}, function(data) {
+        aj3 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: C}, function(data) {
   			console.log( "success" );
   			data_languages['es'] = data.data;
 		}),
-        aj4 = $.post( "http://calmisko.org:7474/db/data/cypher", { query: D}, function(data) {
+        aj4 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: D}, function(data) {
   			console.log( "success" );
   			data_languages['cat'] = data.data;
 		});
 
-        aj5 = $.post( "http://calmisko.org:7474/db/data/cypher", { query: E}, function(data) {
+        aj5 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: E}, function(data) {
   			console.log( "success" );
   			languages_num_tuits = data.data;
 		});
