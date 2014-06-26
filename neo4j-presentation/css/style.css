@@ -8,14 +8,20 @@ h2 {
 
 text {
     font:16px sans-serif;
+    stroke-width: 1px;
+    stroke: black;
 }
 
 #chart-7-1 text {
     font: 10px sans-serif;
+    stroke-width: 1px;
+    stroke: black;
 }
 
 #chart-7-2 text {
     font: 10px sans-serif;
+    stroke-width: 1px;
+    stroke: black;
 }
 
 input.t_chart { margin-left: 10px; }
@@ -27,7 +33,7 @@ input.t_chart { margin-left: 10px; }
 }
 
 .bar:hover {
-  fill: brown;
+  fill: green;
 }
 
 .axis {

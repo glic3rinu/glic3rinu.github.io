@@ -148,6 +148,11 @@ function make_graph(language_data, total_tuits, languages, id){
 		                }
 		            }]
 		        });
+            	Reveal.removeEventListener('perform-query-'+ id, functions[id], false);
+	            Reveal.up();
+            	Reveal.down();
+	        	Reveal.addEventListener('perform-query-'+ id, functions[id]);
+
 }
 
 
@@ -315,21 +320,22 @@ function visualize_query(id) {
 			          .attr("stroke", "black")
 			        .append("g")
 			        .attr("class", "cell child")
-
-			        .on("mouseover", function() {
-			            console.log('hola');
-			            this.parentNode.appendChild(this); // workaround for bringing elements to the front (ie z-index)
-			            console.log(this);
-			            d3.select(this)
-			                .select(".background")
-			                .attr("stroke-width", "3px");
-			        })
+			        .on("mouseover", mOver)
 			        .on("mouseout", function() {
-			            console.log('adeu');
-			            d3.select(this)
-			                .select(".background")
-			                .style("stroke-width", "1px");
-			        });
+	                   d3.select(this)
+				           .transition()
+				           .duration(300)
+				           .style('stroke-width', 1)
+					       .style('stroke', 'black');
+   					});
+
+			        function mOver(d) {
+					    d3.select(this)
+					        .transition()
+					        .duration(300)
+					        .style('stroke-width', 6)
+					        .style('stroke', 'yellow');
+					}
 
 			      node.append("title")
 			          .text(function(d) { return d.className + ": " + format(d.value); });
@@ -454,19 +460,6 @@ function visualize_query(id) {
 		    		      .attr("y", function(d) { return y(d.frequency); })
 		    		      .attr("height", function(d) { return height - y(d.frequency); })
 
-							.on("mouseover", function() {
-					            console.log('hola');
-					            this.parentNode.appendChild(this); // workaround for bringing elements to the front (ie z-index)
-					            d3.select(this)
-					                .select(".background")
-					                .style("stroke", "white");
-					        })
-					        .on("mouseout", function() {
-					            console.log('adeu');
-					            d3.select(this)
-					                .select(".background")
-					                .style("stroke", "black");
-					        });
 
 			        var id_func;
 					if (id == '7-1') {id_func='7'}else {id_func = '8'};
