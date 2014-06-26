@@ -465,8 +465,8 @@ function visualize_query(id) {
 			        var id_func;
 					if (id == '7-1') {id_func='7'}else {id_func = '8'};
 					Reveal.removeEventListener('perform-query-'+ id, functions[id_func], false);
-			        Reveal.up();
-			    	Reveal.down();
+			        Reveal.right();
+			    	Reveal.left();
 			    	Reveal.addEventListener('perform-query-'+ id, functions[id_func]);
 
 			    	function type(d) {
