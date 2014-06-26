@@ -6,11 +6,7 @@ h2 {
 	text-align: center;
 }
 
-text {
-    font:16px sans-serif;
-    stroke-width: 1px;
-    stroke: black;
-}
+
 
 #chart-7-1 text {
     font: 10px sans-serif;
@@ -92,3 +88,8 @@ input.t_chart { margin-left: 10px; }
   stroke: #2ca02c;
 }
 
+.cell.child text {
+    font:16px sans-serif;
+    stroke-width: 1px;
+    stroke: black;
+}

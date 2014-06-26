@@ -163,6 +163,7 @@ var D = get_language_td('cat');
 var E = get_tuits_per_language();
 
 function abort_requests(){
+	$('#feedback').remove();
 	for (var i = 0; i < requests.length; i++) {
 		requests[i].abort();
 	};
@@ -173,7 +174,7 @@ function perform_language_query(id){
 	abort_requests();
 	requests = [];
 	var languages_num_tuits;
-	$("#chart-"+id).prepend('<p><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
+	$("#chart-"+id).prepend('<p id="feedback"><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
 
 	var
         aj1 = $.post( "http://calmisko.org:7474/db/data/cypher", { query: A}, function(data) {
@@ -257,7 +258,7 @@ function visualize_query(id) {
 	}else{
     	var text = $("#query-"+id).text();
    	}
-   	$("#chart-"+id).prepend('<p><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
+   	$("#chart-"+id).prepend('<p id="feedback" ><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
 	var req = $.post( "http://graph.calmisko.org/db/data/cypher", { query: text}, function() {
 	  console.log( "success" );
 	})
@@ -656,7 +657,7 @@ function visualize_query(id) {
 
 	  })
 	  .fail(function() {
-	    alert( "error" );
+	    console.log('error');
 	  })
 	  .always(function() {
 	    console.log( "finished" );
