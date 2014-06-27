@@ -1,0 +1,578 @@
+{
+  "columns" : [ "User", "tweets" ],
+  "data" : [ [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/30370/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/30370/labels",
+    "data" : {
+      "id" : "204270348",
+      "time_zone" : "Greenland",
+      "location" : "barcelona",
+      "name" : "FISHOP - Restaurante",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/30370/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/30370/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/30370",
+    "property" : "http://graph.calmisko.org/db/data/node/30370/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/30370/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/30370/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/30370/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/30370/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/30370/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/30370/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/30370/relationships/in/{-list|&|types}"
+  }, 154 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2710/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2710/labels",
+    "data" : {
+      "id" : "2364060917",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "SantiagoBotrrillo",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2710/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2710/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2710",
+    "property" : "http://graph.calmisko.org/db/data/node/2710/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2710/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2710/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2710/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2710/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2710/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2710/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2710/relationships/in/{-list|&|types}"
+  }, 108 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/458/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/458/labels",
+    "data" : {
+      "id" : "2229030374",
+      "timezone" : "None",
+      "location" : "USA",
+      "name" : "Synergy Wireless",
+      "lang" : "en"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/458/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/458/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/458",
+    "property" : "http://graph.calmisko.org/db/data/node/458/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/458/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/458/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/458/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/458/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/458/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/458/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/458/relationships/in/{-list|&|types}"
+  }, 81 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/516/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/516/labels",
+    "data" : {
+      "id" : "17777149",
+      "timezone" : "Helsinki",
+      "location" : "Espoo, Finland",
+      "name" : "NSN",
+      "lang" : "en"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/516/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/516/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/516",
+    "property" : "http://graph.calmisko.org/db/data/node/516/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/516/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/516/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/516/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/516/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/516/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/516/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/516/relationships/in/{-list|&|types}"
+  }, 70 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/3449/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/3449/labels",
+    "data" : {
+      "id" : "2365798715",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "Elizabetchbotady",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/3449/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/3449/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/3449",
+    "property" : "http://graph.calmisko.org/db/data/node/3449/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/3449/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/3449/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/3449/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/3449/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/3449/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/3449/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/3449/relationships/in/{-list|&|types}"
+  }, 56 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2190/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2190/labels",
+    "data" : {
+      "id" : "24723893",
+      "timezone" : "London",
+      "location" : "Maidstone",
+      "name" : "Tradefair",
+      "lang" : "en"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2190/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2190/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2190",
+    "property" : "http://graph.calmisko.org/db/data/node/2190/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2190/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2190/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2190/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2190/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2190/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2190/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2190/relationships/in/{-list|&|types}"
+  }, 55 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/671/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/671/labels",
+    "data" : {
+      "id" : "403175541",
+      "time_zone" : "Islamabad",
+      "location" : "Lahore, Barcelona, USA",
+      "name" : "DevBatch",
+      "lang" : "en"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/671/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/671/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/671",
+    "property" : "http://graph.calmisko.org/db/data/node/671/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/671/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/671/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/671/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/671/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/671/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/671/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/671/relationships/in/{-list|&|types}"
+  }, 54 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/27644/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/27644/labels",
+    "data" : {
+      "id" : "2207975719",
+      "location" : "Everywhere I Need To Be",
+      "name" : "Donnetta Campbell",
+      "lang" : "en"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/27644/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/27644/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/27644",
+    "property" : "http://graph.calmisko.org/db/data/node/27644/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/27644/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/27644/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/27644/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/27644/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/27644/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/27644/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/27644/relationships/in/{-list|&|types}"
+  }, 50 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/3768/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/3768/labels",
+    "data" : {
+      "id" : "2365798245",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "Botesadecalcuta",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/3768/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/3768/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/3768",
+    "property" : "http://graph.calmisko.org/db/data/node/3768/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/3768/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/3768/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/3768/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/3768/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/3768/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/3768/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/3768/relationships/in/{-list|&|types}"
+  }, 50 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/7311/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/7311/labels",
+    "data" : {
+      "id" : "2357365738",
+      "timezone" : "None",
+      "location" : "",
+      "name" : "MobileWorldCongress",
+      "lang" : "it"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/7311/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/7311/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/7311",
+    "property" : "http://graph.calmisko.org/db/data/node/7311/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/7311/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/7311/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/7311/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/7311/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/7311/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/7311/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/7311/relationships/in/{-list|&|types}"
+  }, 45 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/16663/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/16663/labels",
+    "data" : {
+      "id" : "106492455",
+      "time_zone" : "Eastern Time (US & Canada)",
+      "location" : "",
+      "name" : "IBM Smarter Comms",
+      "lang" : "en"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/16663/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/16663/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/16663",
+    "property" : "http://graph.calmisko.org/db/data/node/16663/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/16663/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/16663/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/16663/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/16663/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/16663/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/16663/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/16663/relationships/in/{-list|&|types}"
+  }, 44 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2836/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2836/labels",
+    "data" : {
+      "id" : "2365685585",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "RobertBotynard",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2836/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2836/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2836",
+    "property" : "http://graph.calmisko.org/db/data/node/2836/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2836/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2836/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2836/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2836/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2836/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2836/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2836/relationships/in/{-list|&|types}"
+  }, 44 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2946/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2946/labels",
+    "data" : {
+      "id" : "263571055",
+      "timezone" : "Madrid",
+      "location" : "Barcelona",
+      "name" : "barcelona_010",
+      "lang" : "ca"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2946/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2946/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2946",
+    "property" : "http://graph.calmisko.org/db/data/node/2946/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2946/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2946/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2946/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2946/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2946/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2946/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2946/relationships/in/{-list|&|types}"
+  }, 44 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/35117/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/35117/labels",
+    "data" : {
+      "id" : "2365821305",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "Renebotcartes",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/35117/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/35117/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/35117",
+    "property" : "http://graph.calmisko.org/db/data/node/35117/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/35117/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/35117/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/35117/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/35117/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/35117/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/35117/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/35117/relationships/in/{-list|&|types}"
+  }, 42 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/8318/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/8318/labels",
+    "data" : {
+      "id" : "2364083573",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "Fidelbot",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/8318/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/8318/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/8318",
+    "property" : "http://graph.calmisko.org/db/data/node/8318/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/8318/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/8318/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/8318/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/8318/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/8318/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/8318/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/8318/relationships/in/{-list|&|types}"
+  }, 42 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/5915/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/5915/labels",
+    "data" : {
+      "id" : "37096554",
+      "timezone" : "Caracas",
+      "location" : "Latinoamérica",
+      "name" : "Estamos en Linea",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/5915/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/5915/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/5915",
+    "property" : "http://graph.calmisko.org/db/data/node/5915/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/5915/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/5915/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/5915/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/5915/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/5915/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/5915/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/5915/relationships/in/{-list|&|types}"
+  }, 38 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/5604/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/5604/labels",
+    "data" : {
+      "id" : "2366693355",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "FrancicoBotoya",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/5604/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/5604/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/5604",
+    "property" : "http://graph.calmisko.org/db/data/node/5604/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/5604/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/5604/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/5604/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/5604/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/5604/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/5604/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/5604/relationships/in/{-list|&|types}"
+  }, 38 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2045/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2045/labels",
+    "data" : {
+      "id" : "2363312927",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "BotagorasdeSamos",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2045/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2045/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2045",
+    "property" : "http://graph.calmisko.org/db/data/node/2045/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2045/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2045/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2045/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2045/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2045/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2045/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2045/relationships/in/{-list|&|types}"
+  }, 38 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/4445/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/4445/labels",
+    "data" : {
+      "id" : "2365807162",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "Boquiavelo",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/4445/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/4445/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/4445",
+    "property" : "http://graph.calmisko.org/db/data/node/4445/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/4445/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/4445/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/4445/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/4445/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/4445/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/4445/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/4445/relationships/in/{-list|&|types}"
+  }, 38 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1911/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1911/labels",
+    "data" : {
+      "id" : "2364528563",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "MariaBotambrano",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1911/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1911/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1911",
+    "property" : "http://graph.calmisko.org/db/data/node/1911/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1911/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1911/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1911/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1911/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1911/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1911/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1911/relationships/in/{-list|&|types}"
+  }, 38 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/490/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/490/labels",
+    "data" : {
+      "id" : "56664540",
+      "time_zone" : "Central Time (US & Canada)",
+      "location" : "",
+      "name" : "Confiz",
+      "lang" : "en"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/490/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/490/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/490",
+    "property" : "http://graph.calmisko.org/db/data/node/490/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/490/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/490/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/490/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/490/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/490/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/490/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/490/relationships/in/{-list|&|types}"
+  }, 36 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/3220/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/3220/labels",
+    "data" : {
+      "id" : "2363922909",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "CiprianoBotiano",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/3220/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/3220/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/3220",
+    "property" : "http://graph.calmisko.org/db/data/node/3220/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/3220/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/3220/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/3220/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/3220/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/3220/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/3220/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/3220/relationships/in/{-list|&|types}"
+  }, 36 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/3073/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/3073/labels",
+    "data" : {
+      "id" : "2364539477",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "AmeliaBotomer",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/3073/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/3073/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/3073",
+    "property" : "http://graph.calmisko.org/db/data/node/3073/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/3073/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/3073/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/3073/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/3073/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/3073/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/3073/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/3073/relationships/in/{-list|&|types}"
+  }, 36 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/6030/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/6030/labels",
+    "data" : {
+      "id" : "2364081832",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "MahamaBotandhi",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/6030/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/6030/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/6030",
+    "property" : "http://graph.calmisko.org/db/data/node/6030/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/6030/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/6030/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/6030/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/6030/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/6030/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/6030/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/6030/relationships/in/{-list|&|types}"
+  }, 36 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/5422/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/5422/labels",
+    "data" : {
+      "id" : "2363931101",
+      "time_zone" : "Europe/Madrid",
+      "location" : "",
+      "name" : "SantiagoBotrrillo",
+      "lang" : "es"
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/5422/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/5422/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/5422",
+    "property" : "http://graph.calmisko.org/db/data/node/5422/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/5422/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/5422/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/5422/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/5422/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/5422/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/5422/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/5422/relationships/in/{-list|&|types}"
+  }, 36 ] ]
+}

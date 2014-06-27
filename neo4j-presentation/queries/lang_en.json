@@ -1,0 +1,529 @@
+{
+  "columns" : [ "Word", "users" ],
+  "data" : [ [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1973/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1973/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "ibm",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1973/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1973/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1973",
+    "property" : "http://graph.calmisko.org/db/data/node/1973/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1973/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1973/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1973/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1973/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1973/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1973/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1973/relationships/in/{-list|&|types}"
+  }, 179 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/72/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/72/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "samsung",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/72/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/72/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/72",
+    "property" : "http://graph.calmisko.org/db/data/node/72/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/72/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/72/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/72/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/72/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/72/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/72/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/72/relationships/in/{-list|&|types}"
+  }, 174 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2725/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2725/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "nokia",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2725/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2725/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2725",
+    "property" : "http://graph.calmisko.org/db/data/node/2725/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2725/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2725/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2725/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2725/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2725/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2725/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2725/relationships/in/{-list|&|types}"
+  }, 115 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/3597/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/3597/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "android",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/3597/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/3597/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/3597",
+    "property" : "http://graph.calmisko.org/db/data/node/3597/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/3597/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/3597/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/3597/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/3597/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/3597/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/3597/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/3597/relationships/in/{-list|&|types}"
+  }, 75 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/804/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/804/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "global",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/804/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/804/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/804",
+    "property" : "http://graph.calmisko.org/db/data/node/804/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/804/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/804/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/804/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/804/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/804/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/804/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/804/relationships/in/{-list|&|types}"
+  }, 64 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1458/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1458/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "blackberry",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1458/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1458/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1458",
+    "property" : "http://graph.calmisko.org/db/data/node/1458/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1458/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1458/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1458/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1458/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1458/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1458/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1458/relationships/in/{-list|&|types}"
+  }, 57 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/839/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/839/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "huawei",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/839/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/839/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/839",
+    "property" : "http://graph.calmisko.org/db/data/node/839/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/839/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/839/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/839/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/839/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/839/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/839/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/839/relationships/in/{-list|&|types}"
+  }, 54 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/14/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/14/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "intel",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/14/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/14/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/14",
+    "property" : "http://graph.calmisko.org/db/data/node/14/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/14/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/14/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/14/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/14/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/14/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/14/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/14/relationships/in/{-list|&|types}"
+  }, 50 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/3932/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/3932/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "htc",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/3932/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/3932/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/3932",
+    "property" : "http://graph.calmisko.org/db/data/node/3932/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/3932/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/3932/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/3932/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/3932/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/3932/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/3932/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/3932/relationships/in/{-list|&|types}"
+  }, 43 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/4342/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/4342/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "gsma",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/4342/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/4342/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/4342",
+    "property" : "http://graph.calmisko.org/db/data/node/4342/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/4342/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/4342/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/4342/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/4342/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/4342/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/4342/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/4342/relationships/in/{-list|&|types}"
+  }, 43 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/779/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/779/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "google",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/779/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/779/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/779",
+    "property" : "http://graph.calmisko.org/db/data/node/779/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/779/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/779/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/779/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/779/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/779/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/779/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/779/relationships/in/{-list|&|types}"
+  }, 41 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/4500/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/4500/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "facebook",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/4500/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/4500/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/4500",
+    "property" : "http://graph.calmisko.org/db/data/node/4500/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/4500/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/4500/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/4500/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/4500/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/4500/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/4500/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/4500/relationships/in/{-list|&|types}"
+  }, 39 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/410/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/410/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "nfc",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/410/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/410/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/410",
+    "property" : "http://graph.calmisko.org/db/data/node/410/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/410/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/410/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/410/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/410/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/410/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/410/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/410/relationships/in/{-list|&|types}"
+  }, 32 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/145/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/145/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "nsn",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/145/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/145/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/145",
+    "property" : "http://graph.calmisko.org/db/data/node/145/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/145/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/145/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/145/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/145/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/145/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/145/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/145/relationships/in/{-list|&|types}"
+  }, 31 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1163/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1163/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "ericsson",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1163/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1163/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1163",
+    "property" : "http://graph.calmisko.org/db/data/node/1163/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1163/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1163/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1163/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1163/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1163/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1163/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1163/relationships/in/{-list|&|types}"
+  }, 31 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1487/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1487/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "jolla",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1487/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1487/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1487",
+    "property" : "http://graph.calmisko.org/db/data/node/1487/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1487/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1487/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1487/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1487/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1487/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1487/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1487/relationships/in/{-list|&|types}"
+  }, 30 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/5554/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/5554/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "mozilla",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/5554/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/5554/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/5554",
+    "property" : "http://graph.calmisko.org/db/data/node/5554/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/5554/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/5554/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/5554/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/5554/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/5554/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/5554/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/5554/relationships/in/{-list|&|types}"
+  }, 29 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2575/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2575/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "firefox",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2575/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2575/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2575",
+    "property" : "http://graph.calmisko.org/db/data/node/2575/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2575/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2575/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2575/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2575/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2575/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2575/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2575/relationships/in/{-list|&|types}"
+  }, 29 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1969/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1969/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "m2m",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1969/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1969/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1969",
+    "property" : "http://graph.calmisko.org/db/data/node/1969/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1969/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1969/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1969/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1969/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1969/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1969/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1969/relationships/in/{-list|&|types}"
+  }, 27 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1861/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1861/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "lg",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1861/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1861/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1861",
+    "property" : "http://graph.calmisko.org/db/data/node/1861/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1861/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1861/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1861/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1861/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1861/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1861/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1861/relationships/in/{-list|&|types}"
+  }, 23 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/2750/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/2750/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "sony",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/2750/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/2750/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/2750",
+    "property" : "http://graph.calmisko.org/db/data/node/2750/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/2750/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/2750/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/2750/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/2750/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/2750/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/2750/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/2750/relationships/in/{-list|&|types}"
+  }, 22 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/86/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/86/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "tizen",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/86/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/86/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/86",
+    "property" : "http://graph.calmisko.org/db/data/node/86/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/86/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/86/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/86/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/86/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/86/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/86/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/86/relationships/in/{-list|&|types}"
+  }, 18 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/327/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/327/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "lenovo",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/327/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/327/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/327",
+    "property" : "http://graph.calmisko.org/db/data/node/327/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/327/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/327/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/327/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/327/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/327/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/327/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/327/relationships/in/{-list|&|types}"
+  }, 17 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/1038/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/1038/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "broadband",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/1038/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/1038/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/1038",
+    "property" : "http://graph.calmisko.org/db/data/node/1038/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/1038/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/1038/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/1038/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/1038/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/1038/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/1038/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/1038/relationships/in/{-list|&|types}"
+  }, 16 ], [ {
+    "outgoing_relationships" : "http://graph.calmisko.org/db/data/node/16572/relationships/out",
+    "labels" : "http://graph.calmisko.org/db/data/node/16572/labels",
+    "data" : {
+      "classification" : "neutral",
+      "value" : "seven",
+      "is_tradermark" : true
+    },
+    "traverse" : "http://graph.calmisko.org/db/data/node/16572/traverse/{returnType}",
+    "all_typed_relationships" : "http://graph.calmisko.org/db/data/node/16572/relationships/all/{-list|&|types}",
+    "self" : "http://graph.calmisko.org/db/data/node/16572",
+    "property" : "http://graph.calmisko.org/db/data/node/16572/properties/{key}",
+    "properties" : "http://graph.calmisko.org/db/data/node/16572/properties",
+    "outgoing_typed_relationships" : "http://graph.calmisko.org/db/data/node/16572/relationships/out/{-list|&|types}",
+    "incoming_relationships" : "http://graph.calmisko.org/db/data/node/16572/relationships/in",
+    "extensions" : {
+    },
+    "create_relationship" : "http://graph.calmisko.org/db/data/node/16572/relationships",
+    "paged_traverse" : "http://graph.calmisko.org/db/data/node/16572/paged/traverse/{returnType}{?pageSize,leaseTime}",
+    "all_relationships" : "http://graph.calmisko.org/db/data/node/16572/relationships/all",
+    "incoming_typed_relationships" : "http://graph.calmisko.org/db/data/node/16572/relationships/in/{-list|&|types}"
+  }, 13 ] ]
+}

@@ -1,0 +1,4 @@
+{
+  "columns" : [ "name", "size" ],
+  "data" : [ [ "samsung", 9 ], [ "lg", 7 ], [ "nsn", 6 ], [ "htc", 4 ], [ "mozilla", 4 ], [ "android", 4 ], [ "google", 4 ], [ "fujitsu", 2 ], [ "nokia", 2 ], [ "sony", 1 ], [ "gsma", 1 ] ]
+}

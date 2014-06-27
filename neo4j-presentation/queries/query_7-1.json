@@ -1,0 +1,4 @@
+{
+  "columns" : [ "name", "size" ],
+  "data" : [ [ "ibm", 145 ], [ "nokia", 62 ], [ "android", 20 ], [ "samsung", 20 ], [ "jolla", 18 ], [ "sony", 16 ], [ "m2m", 14 ], [ "nsn", 14 ], [ "intel", 10 ], [ "lg", 9 ], [ "gsma", 8 ], [ "global", 8 ], [ "lenovo", 8 ], [ "ericsson", 7 ], [ "htc", 6 ], [ "facebook", 6 ], [ "tizen", 4 ], [ "nfc", 4 ], [ "ieee", 4 ], [ "plantronics", 4 ] ]
+}
