@@ -9,13 +9,13 @@ h2 {
 
 
 #chart-7-1 text {
-    font: 12px sans-serif;
+    font: 12px sans;
     stroke-width: 1px;
     stroke: black;
 }
 
 #chart-7-2 text {
-    font: 12px sans-serif;
+    font: 12px sans;
     stroke-width: 1px;
     stroke: black;
 }
@@ -33,7 +33,7 @@ input.t_chart { margin-left: 10px; }
 }
 
 .axis {
-  font: 15px sans-serif;
+  font: 15px sans;
 }
 
 .axis path,
@@ -45,7 +45,7 @@ input.t_chart { margin-left: 10px; }
 
 
 .node {
-  font: 300 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 20px "Helvetica Neue", Helvetica, Arial, sans;
   fill: firebrick;
 }
 
@@ -89,7 +89,7 @@ input.t_chart { margin-left: 10px; }
 }
 
 .cell.child text {
-    font:16px sans-serif;
+    font:16px sans;
     stroke-width: 1px;
     stroke: black;
 }
