@@ -175,25 +175,27 @@ function perform_language_query(id){
 	requests = [];
 	var languages_num_tuits;
 	$("#chart-"+id).prepend('<p id="feedback"><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
+
 	var
-//        aj1 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: A}, function(data) {
-        aj1 = $.get( "queries/lang_other.json", function(data) {
+        aj1 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: A}, function(data) {
+  			console.log( "success" );
   			data_languages['other'] = data.data;
 		}),
-//        aj2 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: B}, function(data) {
-        aj2 = $.get( "queries/lang_en.json", function(data) {
+        aj2 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: B}, function(data) {
+  			console.log( "success" );
   			data_languages['en'] = data.data
 		}),
-//        aj3 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: C}, function(data) {
-        aj3 = $.get( "queries/lang_es.json", function(data) {
+        aj3 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: C}, function(data) {
+  			console.log( "success" );
   			data_languages['es'] = data.data;
 		}),
-//        aj4 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: D}, function(data) {
-        aj4 = $.get( "queries/lang_cat.json", function(data) {
+        aj4 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: D}, function(data) {
+  			console.log( "success" );
   			data_languages['cat'] = data.data;
 		});
-//        aj5 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: E}, function(data) {
-        aj5 = $.get( "queries/lang_count.json", function(data) {
+
+        aj5 = $.post( "http://graph.calmisko.org/db/data/cypher", { query: E}, function(data) {
+  			console.log( "success" );
   			languages_num_tuits = data.data;
 		});
         requests.push(aj1, aj2, aj3, aj4, aj5);
@@ -257,9 +259,8 @@ function visualize_query(id) {
     	var text = $("#query-"+id).text();
    	}
    	$("#chart-"+id).prepend('<p id="feedback" ><small>Querying database backend <span id="dancing-dots-text"> <span><span>.</span><span>.</span><span>.</span></span></span></small></p>');
-//	var req = $.post( "http://graph.calmisko.org/db/data/cypher", { query: text}, function() {
-	var req = $.get( "queries/query_"+id+".json", function() {
-	  console.log( id );
+	var req = $.post( "http://graph.calmisko.org/db/data/cypher", { query: text}, function() {
+	  console.log( "success" );
 	})
 	  .done(function(data) {
 	    console.log( "Dades" + data.data + "ciao");
@@ -287,6 +288,10 @@ function visualize_query(id) {
 				    		str.children[0].children[i].name="empty";
 				    	}
 				    	str.children[0].children[i].size=data.data[i][1];
+
+
+
+
 				    }
 				    objJson=JSON.stringify(str);
 				    console.log(objJson);
